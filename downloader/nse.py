@@ -1,3 +1,6 @@
+import requests
+
+
 class NSE:
     def __init__(self, dt):
         self.dt = dt
@@ -9,5 +12,11 @@ class NSE:
         month = self.dt.strftime('%b').upper()
         self.nse_url = self.NSE_URL.format(month, month)
         self.nse_url = self.dt.strftime(self.nse_url)
-        print(self.nse_url)
-    
+
+    def download(self):
+        with requests.Session() as session:
+            session.headers.update({'User-Agent': 'Mozilla/5.0'})
+            response = session.get(self.nse_url)
+            response.raise_for_status()
+            return response.content
+        return None

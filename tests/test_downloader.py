@@ -15,3 +15,8 @@ def test_download_url():
     assert nse.nse_url == 'https://archives.nseindia.com/content/historical/EQUITIES/2022/MAY/cm17MAY2022bhav.csv.zip'
 
 
+def test_download():
+    dt = datetime.datetime(2022, 5, 17)
+    nse = NSE(dt)
+    nse.url()
+    assert nse.download() is not None
