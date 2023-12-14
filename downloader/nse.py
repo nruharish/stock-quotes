@@ -18,5 +18,5 @@ class NSE:
             session.headers.update({'User-Agent': 'Mozilla/5.0'})
             response = session.get(self.nse_url)
             response.raise_for_status()
-            return response.content
+            return response
         return None
