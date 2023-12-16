@@ -1,10 +1,11 @@
 import requests
+from config import Config
 
 
 class NSE:
     def __init__(self, dt):
         self.dt = dt
-        self.NSE_URL = "https://archives.nseindia.com/content/historical/EQUITIES/%Y/{0}/cm%d{1}%Ybhav.csv.zip"
+        self.NSE_URL = Config().get_config("downloader")["NSE_URL"]
         self.nse_url = ''
 
     def url(self):
