@@ -1,0 +1,8 @@
+{
+    "db":{
+
+    },
+    "downloader":{
+        "NSE_URL" : "https://archives.nseindia.com/content/historical/EQUITIES/%Y/{0}/cm%d{1}%Ybhav.csv.zip"
+    }
+}
