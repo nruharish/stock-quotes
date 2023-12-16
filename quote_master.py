@@ -2,11 +2,21 @@ from downloader.nse import NSE
 import datetime
 
 
-def test_download():
-    dt = datetime.datetime(2022, 5, 17)
-    nse = NSE(dt)
-    nse.url()
-    print(nse.download())
+class Main :
+    def execute():
+        '''
+        * Init - Create the DB and tables if required
+        * Get the last quote date
+        * From last quote to current date get the quote(s)
+        * Persist the quote in persistance
+        '''
+        pass
 
+    def get_quote():
+        pass
 
-test_download()
+    def persist_quote():
+        pass
+
+    def init():
+        pass
